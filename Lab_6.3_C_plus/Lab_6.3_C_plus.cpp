@@ -45,24 +45,7 @@ void task()
 	delete[] human;
 	human = nullptr;
 
-	cout << endl << endl << "Все оценки положительные: " << endl;
-	Human* restoredDB = new Human[N];
-	f_in = fopen(path, "rb");
-	fread(restoredDB, sizeof(Human), N, f_in);
-	fclose(f_in);
-
-	for (size_t i = 0; i < N; i++)
-	{
-		if (restoredDB[i].Math != 0 && restoredDB[i].Physics != 0 && restoredDB[i].Chemistry != 0)
-		{
-
-			cout << restoredDB[i].Surname << "\t" << "Группа: " << restoredDB[i].Group << "\t" << "Математика: " << restoredDB[i].Math << "\t" << "Физика: " << restoredDB[i].Physics << "\t" << "Химия: " << restoredDB[i].Chemistry << "\t" << "Стипендия: " << restoredDB[i].Cash << endl; ;
-
-		}
-
-
-	}
-}
+	
 
 int main()
 {
